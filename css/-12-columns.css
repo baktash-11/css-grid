@@ -1,0 +1,86 @@
+:root{
+    --background: #1B3955;
+    --foreground: #C9C5B5;
+    --navy: #363a57;
+    --lapis: #2B4D8D;
+    
+}
+body{
+    background-color: var(--foreground);
+    color: var(--foreground);
+    text-align: center;
+    margin: 0;
+    padding: 0;
+}
+
+#content{
+    max-width: 960px;
+    margin:0 auto;
+    text-align: center;
+    
+}
+
+#content>*{
+    background-color: var(--lapis);
+    padding: 30px;
+}
+
+#content{
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 10px;
+    position: relative;
+}
+header{
+    grid-column: 1/13;
+}
+main{
+    grid-column: 4/13;
+    grid-row: 2/26;
+}
+aside{
+    grid-column: 1/4;
+    grid-row: 2/14;
+}
+nav{
+    grid-column: 1/4;
+    grid-row: 14/26;
+
+}
+section{
+    grid-column: 1/13;
+    grid-row: 26/50;
+
+}
+footer{
+    grid-column: 1/13;
+    grid-row: 50/60;
+}
+
+#grid{
+    background-color: rgba(95, 89, 89, 0.151);
+    display: grid;
+    position:absolute;
+    top: 0;
+    left: 0;
+    grid-template-columns: repeat(12, 1fr);
+    grid-auto-rows: minmax(100%, auto);
+    width: 100%;
+    height: 100%;
+    /* background-color: transparent; */
+    padding: 0;
+    
+}
+#grid p{
+    border: 1px solid wheat;
+    opacity: 0.3;
+
+}
+input:checked + #content #grid{
+    
+    /* opacity: 0; */
+    display: none;
+    
+   
+    
+}
