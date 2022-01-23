@@ -46,8 +46,47 @@
       const filterCanDrink2 = ages.filter(age => age >= 24);
       console.log(filterCanDrink2)
       
-      
+      // filter companies
+      const retailCompanies = companies.filter((retail) =>{
+        if(retail.category === "Retail"){
+          return true;
+        }
+      });
+      console.log(retailCompanies);
+
+      //filter financing companies
+      const financeCompanies = companies.filter((finance)=> finance.category==="Finance");
+      console.log(financeCompanies);
     
+      // companies started around 80s 
+      const companiesFrom80s = companies.filter(year => ( year.start >= 1980) && year.start < 1990);
+      console.log(companiesFrom80s);
+
+      // get companies lasted 10 years or longer
+      const companiesLastTenYears = companies.filter(years =>(years.end - years.start)<= 10);
+      console.log("companies last 10 years and longer are ", companiesLastTenYears);
+
+
+      // map
+      const companiesName=[];
+      for (let i = 0; i < companies.length; i++) {
+          companiesName.push(companies[i].name)
+        
+      }
+      console.log(companiesName);
+
+      //getting companies name using map 
+      const mapCompaniesName= companies.map((company)=>{
+        return company.name;
+      });
+      console.log(mapCompaniesName);
+
+      const mapCompaniesNameShortHand = companies.map(company => `Name: ${company.name} [From ${company.start} to ${company.end}] `);
+      console.log(mapCompaniesNameShortHand);
+
+      // map age
+      const ageMap = ages.map(age => Math.sqrt(age)).map(age => age * 2);
+      console.log(ageMap);
       // foreach
       // filter
       // sort
