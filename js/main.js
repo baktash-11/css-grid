@@ -23,6 +23,10 @@
 
          ageCanDrink();
          console.log(filterCanDrink);
+
+
+        const sortCompaniesByEnd = companies.sort ((c1, c2)=> c1.end > c2.end ? 1 : -1);
+        console.log(sortCompaniesByEnd, "sort companies by End date")
       }
       const canDrink = [];
 
@@ -87,6 +91,22 @@
       // map age
       const ageMap = ages.map(age => Math.sqrt(age)).map(age => age * 2);
       console.log(ageMap);
+
+
+      // sort companies
+      const sortCompanies = companies.sort(function(c1, c2){
+        if(c1.start > c2.start){
+          return 1;
+        }else{
+          return -1;
+        }
+      });
+      console.log( sortCompanies , "Sorted Companies by Start");
+
+      
+      const sortAges = ages.sort((a , b)=>a - b);
+      console.log(sortAges);
+
       // foreach
       // filter
       // sort
