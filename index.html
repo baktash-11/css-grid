@@ -5,8 +5,77 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CSS Grid</title>
-    <link rel="stylesheet" href="./css/style.css">
+    
     <script src="./js/main.js"></script>
+    <style>
+        .search-form{
+            width: 80%;
+            margin: auto;
+        }
+       
+        input[type="search"]{
+            box-sizing: border-box;
+            background-color: #292C31;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            padding: 0.35em 0.75em;
+            border: none;
+            font-size: 1.1em;
+            text-decoration: none;
+            line-height: normal;
+            max-height: 3em;
+            
+           
+        }
+        button[type="submit"]{
+            box-sizing: border-box;
+            border-radius: 0px 2px 2px 0px;
+            background-color: #5f3e61;
+            font-weight: 300;
+            text-transform: uppercase;
+            color: white;
+            padding: 0.35em 0.75em;
+            border:none;
+            font-size: 1.1em;
+            text-decoration: none;
+            cursor: pointer;
+        }
+        button[type="submit"]:hover{
+            background-color:#8a4e8d ;
+        }
+        hr{
+            padding: 20px;
+           border:none
+        }
+        /* flex it */
+        .search-form{
+            display: flex;
+            flex-wrap: wrap;
+        }
+        input[type="search"]{
+            flex:2 0 250px; 
+        }
+        button[type="submit"]{
+            flex: 1 0 90px;
+        }
+
+        @media (max-width:450px) {
+            body{
+                width: 100%;
+                margin: 0;
+                padding: 1em 0 2em;
+                background-color: green;
+                
+            }
+        }
+
+    </style>
+
+<link rel="stylesheet" href="./css/style.css">
+    
+
+    
 </head>
 <body>
     <header>
@@ -62,6 +131,25 @@
         <div> <a href="./grid-12-columns.html">12 columns Grid</a></div>
         <div> <a href="./mosaic.html">Mosaic Layout</a></div>
         
+
+        
+        
     </div>
+
+    
+
+
+    <hr>
+        <article class="example">
+            <form  class="search-form">
+                <input type="search"  name="search" placeholder="Search this site" class="search-input">
+                <button type="submit" class="search-btn">Search</button>
+            </form>
+            
+    
+        </article>
+    <hr>
+    
+    
 </body>
 </html>
